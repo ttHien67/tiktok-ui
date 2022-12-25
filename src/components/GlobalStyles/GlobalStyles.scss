@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 @import 'normalize.css';
 
+:root {
+    // Default layout
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px;
+}
+
 html {
     font-size: 62.5%;
 }
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 body {
