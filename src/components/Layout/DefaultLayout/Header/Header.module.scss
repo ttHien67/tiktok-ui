@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 24px;
 }
 
 .search {
@@ -96,3 +97,10 @@
     color: rgba(22, 24, 35, 0.5);
 }
 
+// more setting
+.more-btn {
+    font-size: 2rem;
+    margin-left: 28px;
+    padding: 4px 8px;
+    background-color: transparent;
+}
