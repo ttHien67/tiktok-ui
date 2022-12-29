@@ -18,7 +18,32 @@
     border-radius: 0;
     padding: 11px 16px;
 
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
+
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
+}
+
+// header-menu
+.header {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin-top: -8px;
+}
+
+.header-btn-back {
+    height: 100%;
+    width: 50px;
+    background-color: transparent;
+}
+
+.header-title {
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    flex: 1;
 }
