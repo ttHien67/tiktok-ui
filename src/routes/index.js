@@ -6,7 +6,7 @@ import OnlyHeader from '@/components/Layout/OnlyHeader';
 
 const publicRoutes = [
     { path: '/', component: HomePage },
-    { path: '/following', component: FollowingPage },
+    { path: '/:nickname', component: FollowingPage },
     { path: '/upload', component: UploadPage, layout: OnlyHeader },
     { path: '/search', component: SearchPage, layout: null },
 ];

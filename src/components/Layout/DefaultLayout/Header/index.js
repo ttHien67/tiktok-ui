@@ -6,6 +6,7 @@ import Tippy from '@tippyjs/react';
 import Button from '@/components/Button';
 import Menu from '@/components/Popper/Menu';
 import Search from './Search';
+import Image from '@/components/Images';
 
 import { InboxIcon, MessageIcon, UploadIcon } from '@/components/Icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -132,7 +133,7 @@ function Header() {
 
                     <Menu items={userLogin ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {userLogin ? (
-                            <img
+                            <Image
                                 className={cx('img-user')}
                                 alt="user"
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/05aa222706c452c8ad0ea7d2e719a745~c5_100x100.jpeg?x-expires=1672232400&x-signature=Leeik1hx%2FPRz0wMH76obkSQKjao%3D"
