@@ -10,6 +10,7 @@
     --black: #000;
     --white: #fff;
     --text-color: #333;
+    --font-root: 'ProximaNova', serif
 }
 
 html {
@@ -21,7 +22,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    font-family: 'ProximaNova', serif;
+    font-family: var(--font-root);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;

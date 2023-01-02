@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import TippyHeadless from '@tippyjs/react/headless';
 import AccountItem from '@/components/AccountItem';
-import classNames from 'classnames/bind'
-import * as searchService from '@/apiService/Search'
+import classNames from 'classnames/bind';
+import * as searchService from '@/apiService/Search';
 import styles from './Search.module.scss';
 import { Wrapper as PopperWrapper } from '@/components/Popper';
 import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
@@ -28,15 +28,14 @@ function Search() {
         }
 
         const fetchApi = async () => {
-            setLoading(true)
-            const reusult = await searchService.search(debounced)
+            setLoading(true);
+            const reusult = await searchService.search(debounced);
 
-            setSearchResult(reusult)
-            setLoading(false)
-        }
+            setSearchResult(reusult);
+            setLoading(false);
+        };
 
-        fetchApi()
-       
+        fetchApi();
     }, [debounced]);
 
     const handleClear = () => {
@@ -46,6 +45,14 @@ function Search() {
 
     const handleHideResult = () => {
         setShowResult(false);
+    };
+
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
     };
 
     return (
@@ -69,7 +76,7 @@ function Search() {
                     value={searchValue}
                     placeholder="Search accounts and videos"
                     spellCheck={false}
-                    onChange={(e) => setSearchValue(e.target.value)}
+                    onChange={handleChange}
                     ref={inputRef}
                     onFocus={() => setShowResult(true)}
                 />
@@ -82,7 +89,7 @@ function Search() {
 
                 {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
 
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <SearchIcon />
                 </button>
             </div>
