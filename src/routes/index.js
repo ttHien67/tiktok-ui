@@ -2,7 +2,7 @@ import HomePage from '@/pages/Home/Home';
 import FollowingPage from '@/pages/Following/Following';
 import UploadPage from '@/pages/Upload/Upload';
 import SearchPage from '@/pages/Search/Search';
-import OnlyHeader from '@/components/Layout/OnlyHeader';
+import OnlyHeader from '@/layouts/OnlyHeader';
 import routesConfig from '@/config/routesConfig';
 
 const publicRoutes = [

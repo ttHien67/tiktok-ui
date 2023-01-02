@@ -27,6 +27,10 @@
     }
 }
 
+.menu-body { 
+    overflow-y: auto;
+}
+
 // header-menu
 .header {
     display: flex;

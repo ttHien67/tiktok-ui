@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Fragment } from 'react';
 import { publicRoutes } from '@/routes';
-import DefaultLayout from './components/Layout/DefaultLayout';
-import OnlyHeader from './components/Layout/OnlyHeader';
+import DefaultLayout from './layouts/DefaultLayout';
+import OnlyHeader from './layouts/OnlyHeader';
 
 function App() {
     return (
@@ -12,12 +12,12 @@ function App() {
                     {publicRoutes.map((route, index) => {
                         const Component = route.component;
 
-                        let Layout = DefaultLayout
+                        let Layout = DefaultLayout;
 
-                        if(route.layout){
-                            Layout = OnlyHeader
-                        }else if(route.layout === null ){
-                            Layout = Fragment
+                        if (route.layout) {
+                            Layout = OnlyHeader;
+                        } else if (route.layout === null) {
+                            Layout = Fragment;
                         }
 
                         return (
