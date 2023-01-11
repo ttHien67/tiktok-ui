@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import Header from './Header';
-import Sidebar from './Sidebar';
+import Sidebar from '../Sidebar';
 import classNames from 'classnames/bind';
 import style from './DefaultLayout.module.scss';
 
